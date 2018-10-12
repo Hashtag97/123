@@ -89,6 +89,7 @@ namespace calc
             FreeButtons();
         }
 
+        // Проверка нуля и применения отрицательного знака на любое число
         private void buttonSwap_Click(object sender, EventArgs e)
         {
             if (labelNumber.Text[0] == '0')
