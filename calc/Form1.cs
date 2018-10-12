@@ -55,6 +55,8 @@ namespace calc
 
             if (!buttonMinus.Enabled)
                 return false;
+            if (!buttonPow.Enabled)
+                return false;
 
             return true;
         }
@@ -65,6 +67,7 @@ namespace calc
             buttonDiv.Enabled = true;
             buttonPlus.Enabled = true;
             buttonMinus.Enabled = true;
+            buttonPow.Enabled = true;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -88,7 +91,9 @@ namespace calc
 
         private void buttonSwap_Click(object sender, EventArgs e)
         {
-            if (labelNumber.Text[0] == '-')
+            if (labelNumber.Text[0] == '0')
+                labelNumber.Text = "0";
+            else if (labelNumber.Text[0] == '-')
                 labelNumber.Text = labelNumber.Text.Remove(0, 1);
             else
                 labelNumber.Text = "-" + labelNumber.Text;
@@ -176,6 +181,8 @@ namespace calc
 
             if (!buttonMinus.Enabled)
                 labelNumber.Text = calc.Subtraction(Convert.ToDouble(labelNumber.Text)).ToString();
+            if (!buttonPow.Enabled)
+                labelNumber.Text = calc.DegreeY(Convert.ToDouble(labelNumber.Text)).ToString();
 
 
             calc.Clear_A();
@@ -251,6 +258,57 @@ namespace calc
                 calc.Put_A(Convert.ToDouble(labelNumber.Text));
 
                 labelNumber.Text = calc.Sqrt().ToString();
+
+                calc.Clear_A();
+                FreeButtons();
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (CanPress())
+            {
+                calc.Put_A(Convert.ToDouble(labelNumber.Text));
+
+                buttonPow.Enabled = false;
+
+                labelNumber.Text = "0";
+            }
+        }
+
+        private void buttonSin_Click(object sender, EventArgs e)
+        {
+            if (CanPress())
+            {
+                calc.Put_A(Convert.ToDouble(labelNumber.Text));
+
+                labelNumber.Text = calc.Sin().ToString();
+
+                calc.Clear_A();
+                FreeButtons();
+            }
+        }
+
+        private void buttonCos_Click(object sender, EventArgs e)
+        {
+            if (CanPress())
+            {
+                calc.Put_A(Convert.ToDouble(labelNumber.Text));
+
+                labelNumber.Text = calc.Cos().ToString();
+
+                calc.Clear_A();
+                FreeButtons();
+            }
+        }
+
+        private void buttonTag_Click(object sender, EventArgs e)
+        {
+            if (CanPress())
+            {
+                calc.Put_A(Convert.ToDouble(labelNumber.Text));
+
+                labelNumber.Text = calc.Tag().ToString();
 
                 calc.Clear_A();
                 FreeButtons();

@@ -50,11 +50,19 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.labelNumber = new System.Windows.Forms.Label();
+            this.buttonPow = new System.Windows.Forms.Button();
+            this.buttonSin = new System.Windows.Forms.Button();
+            this.buttonCos = new System.Windows.Forms.Button();
+            this.buttonTag = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonTag);
+            this.groupBox1.Controls.Add(this.buttonCos);
+            this.groupBox1.Controls.Add(this.buttonSin);
+            this.groupBox1.Controls.Add(this.buttonPow);
             this.groupBox1.Controls.Add(this.buttonSwap);
             this.groupBox1.Controls.Add(this.button13);
             this.groupBox1.Controls.Add(this.button18);
@@ -78,7 +86,7 @@
             this.groupBox1.Controls.Add(this.labelNumber);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(217, 215);
+            this.groupBox1.Size = new System.Drawing.Size(280, 215);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -105,7 +113,7 @@
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(179, 175);
+            this.button18.Location = new System.Drawing.Point(241, 175);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(32, 32);
             this.button18.TabIndex = 18;
@@ -290,19 +298,57 @@
             this.labelNumber.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelNumber.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelNumber.Location = new System.Drawing.Point(144, 16);
+            this.labelNumber.Location = new System.Drawing.Point(207, 16);
             this.labelNumber.Name = "labelNumber";
             this.labelNumber.Size = new System.Drawing.Size(70, 25);
             this.labelNumber.TabIndex = 0;
             this.labelNumber.Text = "label1";
             // 
+            // buttonPow
+            // 
+            this.buttonPow.Location = new System.Drawing.Point(179, 175);
+            this.buttonPow.Name = "buttonPow";
+            this.buttonPow.Size = new System.Drawing.Size(56, 32);
+            this.buttonPow.TabIndex = 21;
+            this.buttonPow.Text = "X^Y";
+            this.buttonPow.UseVisualStyleBackColor = true;
+            this.buttonPow.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // buttonSin
+            // 
+            this.buttonSin.Location = new System.Drawing.Point(217, 61);
+            this.buttonSin.Name = "buttonSin";
+            this.buttonSin.Size = new System.Drawing.Size(56, 32);
+            this.buttonSin.TabIndex = 22;
+            this.buttonSin.Text = "Sin(X)";
+            this.buttonSin.UseVisualStyleBackColor = true;
+            this.buttonSin.Click += new System.EventHandler(this.buttonSin_Click);
+            // 
+            // buttonCos
+            // 
+            this.buttonCos.Location = new System.Drawing.Point(218, 99);
+            this.buttonCos.Name = "buttonCos";
+            this.buttonCos.Size = new System.Drawing.Size(56, 32);
+            this.buttonCos.TabIndex = 23;
+            this.buttonCos.Text = "Cos(X)";
+            this.buttonCos.UseVisualStyleBackColor = true;
+            this.buttonCos.Click += new System.EventHandler(this.buttonCos_Click);
+            // 
+            // buttonTag
+            // 
+            this.buttonTag.Location = new System.Drawing.Point(217, 137);
+            this.buttonTag.Name = "buttonTag";
+            this.buttonTag.Size = new System.Drawing.Size(56, 32);
+            this.buttonTag.TabIndex = 24;
+            this.buttonTag.Text = "Tag(X)";
+            this.buttonTag.UseVisualStyleBackColor = true;
+            this.buttonTag.Click += new System.EventHandler(this.buttonTag_Click);
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(240, 237);
+            this.ClientSize = new System.Drawing.Size(304, 237);
             this.Controls.Add(this.groupBox1);
-            this.MaximumSize = new System.Drawing.Size(256, 276);
-            this.MinimumSize = new System.Drawing.Size(256, 276);
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RightToLeftLayout = true;
@@ -338,6 +384,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonTag;
+        private System.Windows.Forms.Button buttonCos;
+        private System.Windows.Forms.Button buttonSin;
+        private System.Windows.Forms.Button buttonPow;
     }
 }
 

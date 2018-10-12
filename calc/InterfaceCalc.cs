@@ -26,7 +26,12 @@ namespace calc
         double Sqrt();
 
         double Square();
-           
+
+        double Sin();
+
+        double Cos();
+
+        double Tag();
 
     }
 }

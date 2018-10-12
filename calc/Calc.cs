@@ -27,7 +27,11 @@ namespace calc
 
         public double Division(double b)
         {
+            if (b == 0)
+                return 0;
+
             return a / b;
+
         }
 
         public double Sum(double b)
@@ -48,12 +52,27 @@ namespace calc
 
         public double Sqrt()
         {
+            if (a < 0)
+                return a = 0;
             return Math.Sqrt(a);
         }
 
         public double Square()
         {
             return Math.Pow(a, 2.0);
+        }
+
+        public double Sin()
+        {
+            return Math.Sin(a);
+        }
+        public double Cos()
+        {
+            return Math.Cos(a);
+        }
+        public double Tag()
+        {
+            return Math.Tan(a);
         }
 
     }
