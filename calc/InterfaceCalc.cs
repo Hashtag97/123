@@ -19,7 +19,7 @@ namespace calc
 
         double Sum(double b);
 
-        double Subtraction(double b); //вычитание
+        double Subtraction(double b);
 
         double DegreeY(double b);
 
